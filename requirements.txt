@@ -1,0 +1,33 @@
+# 环境：AutoDL RTX 4090, Python 3.12, CUDA 12.4
+
+# ===== 后端框架 =====
+fastapi==0.111.0
+uvicorn==0.30.0
+pydantic==2.12.5
+
+# ===== 数据库 =====
+sqlalchemy==2.0.30
+pymysql==1.1.1
+
+# ===== 认证 =====
+python-jose==3.3.0
+passlib==1.7.4
+# bcrypt==5.0.0 与 passlib 1.7.4 不兼容，auth.py 中已改用 sha256_crypt
+
+# ===== RAG / 向量检索 =====
+langchain==0.1.20
+langchain-community==0.0.38
+langchain-core==0.1.53
+langchain-text-splitters==0.0.2
+chromadb==0.4.24
+sentence-transformers==2.7.0
+sentencepiece==0.2.1
+
+# ===== 模型推理 =====
+transformers==4.41.2
+peft==0.11.1
+trl==0.8.6
+scipy==1.11.4
+# torch 和 torchvision 由 AutoDL 预装，勿单独 pip install
+# torch==2.5.1+cu124
+# torchvision==0.20.1+cu124
